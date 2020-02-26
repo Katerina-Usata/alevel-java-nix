@@ -1,15 +1,13 @@
 package com.alevel.java.nix.module1;
 import java.util.Stack;
-public class StringCharacterCheck
-{
-    public static void main(String[] args)
-    {
+
+public class StringCharacterCheck {
+    public static void main(String[] args) {
         String s = "{}({}";
         System.out.println(Check(s));
     }
 
-    public static boolean Check(String s)
-    {
+    public static boolean Check(String s) {
         if (s.isEmpty()) return true;
 
         Character openingBrace = new Character('{');
@@ -21,8 +19,8 @@ public class StringCharacterCheck
             char cur = s.charAt(i);
             if (cur == openingBrace || cur == openingBracket || cur == openingParen) {
                 openingStack.push(cur);
-            } else  {
-                if (i == s.length()-1 && openingStack.size() != 1) {
+            } else {
+                if (i == s.length() - 1 && openingStack.size() != 1) {
                     return false;
                 }
                 if (openingStack.isEmpty()) {

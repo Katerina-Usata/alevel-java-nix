@@ -1,7 +1,5 @@
 package com.alevel.java.nix.module1;
 
-
-
 public class NumberOfUniqueCharacters {
     public static void main(String[] args) {
         int[] mas = {1, 5, 8, 1, 1, 1, 1, 1};
@@ -30,11 +28,7 @@ public class NumberOfUniqueCharacters {
                 countUnic = count;
                 result++;
             }
-
         }
         return result;
-
     }
-
-
 }
