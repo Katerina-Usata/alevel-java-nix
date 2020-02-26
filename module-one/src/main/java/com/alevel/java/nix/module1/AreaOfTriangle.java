@@ -5,8 +5,8 @@ public class AreaOfTriangle {
         //  \[S = \frac{1}{2}\left| {(x_2 - x_1 )(y_3 - y_1 ) - (x_3 - x_1 )(y_2 - y_1 )} \right|.\]
 
         Point A = new Point(2, 12);
-        Point B = new Point(7, 8);
-        Point C = new Point(7, 6);
+        Point B = new Point(-7, 8);
+        Point C = new Point(7, -6);
 
         int one = B.getX() - A.getX();
         int two = C.getY() - A.getY();
@@ -15,19 +15,16 @@ public class AreaOfTriangle {
         int four = B.getY() - A.getY();
         int res2 = tree * four;
         int res3 = res - res2;
-        int res4 = res3 / 2;
+        int area = res3 / 2;
+        System.out.println(Math.abs(area));
 
-        if (res4 < 0) {
-            int area = res4 * (-1);
-            System.out.println(area);
-        }
     }
 
     static class Point {
 
-        int x, y;            //параметры точки
+        int x, y;
 
-        Point(int ax, int ay) {   //конструктор
+        Point(int ax, int ay) {
             x = ax;
             y = ay;
         }
